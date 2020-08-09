@@ -1,0 +1,22 @@
+const express = require('express')
+const server = express()
+
+const {pageLanding, pageStudy, pageGiveClasses, saveClasses, pageSuccess} = require('./pages')
+
+//configurar nunjucks
+const nunjucks = require('nunjucks')
+nunjucks.configure('src/views', {
+    express: server,
+    noCache: true
+})
+
+server
+.use(express.urlencoded({extended: true})) //recebendo o req.body
+.use(express.static("public")) //arquivos estáticos
+//rotas
+.get("/", pageLanding)
+.get("/study", pageStudy)
+.get("/give-classes", pageGiveClasses)
+.get("/success", pageSuccess)
+.post("/save-classes", saveClasses)
+.listen(5500) 

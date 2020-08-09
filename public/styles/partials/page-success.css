@@ -1,0 +1,37 @@
+#page-success {
+    background: var(--color-primary);
+}
+
+#page-success #container{
+    color: var(--color-text-in-primary);   
+    position: relative;     
+}
+
+.logo-container img {
+    height: 10rem;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 3.2rem;
+    position: relative;
+}
+
+.logo-container h2 {
+    font-weight: 900;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+.logo-container p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2.0rem;
+    margin-top: 0.8rem;
+}
+
+.hero-image {
+    width: 100%;
+    position: absolute;
+}
